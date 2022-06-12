@@ -1,24 +1,21 @@
-# README
+# The Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Listing Contentful API recipes
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+1) `Ruby version > 2.7`
+2) `Rails version  7`
 
-* System dependencies
+## Installation
 
-* Configuration
+1) `git clone ...`
+2) `cd marly-spoon-recipes`
+3) `bundle install`
+4) `rails s`
+5) open this url in browser `http://localhost:3000`
+   
 
-* Database creation
+## Test
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bundle exec rspec`
