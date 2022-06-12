@@ -1,0 +1,25 @@
+<div class="recipes-page">
+  <%- if @recipes.blank? %>
+    <div class="no-recipes">
+      <h1>No recipes</h1>
+      <p>Please try again later</p>
+    </div>
+  <% else %>
+    <%- @recipes.each do |recipe| %>
+      <div class="recipe">
+        <%= link_to(recipe_path(recipe.id)) do %>
+          <img src="<%= recipe.photo&.url %>" alt="Image of recipe">
+        <% end %>
+        <%= link_to(recipe_path(recipe.id)) do %>
+          <div class="details">
+            <%= link_to(recipe_path(recipe.id)) do %>
+              <h2><%= recipe.title %></h2>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+<div style="text-align: center;"><%= will_paginate @pages %></div>

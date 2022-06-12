@@ -1,0 +1,80 @@
+body {
+  background-color: #f6f6f6;
+  font-family: "Avenir Next Cyr W00 Regular",Arial,sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 0;
+  padding-top: 64px;
+
+  a {
+    color: #2d2926;
+    text-decoration: none;
+    transition: all .3s ease-in-out 0s;
+
+    &:hover {
+      color: #47d7ac;
+    }
+  }
+
+  .header {
+    background: #fff;
+    box-shadow: 0 1px 1px -1px rgba(0,0,0,.1);
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+
+    .container {
+      align-items: center;
+      display: flex;
+      width: 436px;
+
+      @media screen and (min-width: 1024px) {
+        width: 900px;
+      }
+    }
+
+    .logo {
+      height: 44px;
+      margin-left: 0;
+      width: 98px;
+
+      a {
+        background-image: url("https://marleyspoon.com/images/ms/svg/logo-martha-marley-spoon-e532d6d35b.svg");
+        display: block;
+        height: 44px;
+        overflow: hidden;
+        text-indent: -1000%;
+        width: 98px;
+      }
+    }
+
+    .navigation {
+      margin-left: 100px;
+
+      .navigation-item a {
+        box-sizing: border-box;
+        display: block;
+        font-size: 14px;
+        height: 40px;
+        margin-top: 24px;
+      }
+
+      .navigation-item a:hover,
+      .navigation-item a.active {
+        border-bottom-color: rgb(255, 205, 0);
+        border-bottom-style: solid;
+        border-bottom-width: 4px;
+        border-bottom: 4px solid #ffcd00;
+        color: #2d2926;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+  }
+}

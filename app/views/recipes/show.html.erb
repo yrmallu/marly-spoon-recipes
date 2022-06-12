@@ -1,0 +1,29 @@
+<div class="recipe-page">
+  <div class="recipe-container">
+    <img src="<%= @recipe.photo_url %>" alt="Image of recipe">
+    <div class="recipe-info">
+      <h3 class="recipe-title">
+        <%= @recipe.title %>
+      </h3>
+      <%- if @recipe.tags.present?%>
+        <div class="recipe-tags">
+          <%- @recipe.tags.each do |tag| %>
+            <div class="recipe-tag"><%= tag %></div>
+          <% end %>
+        </div>
+      <% end %>
+      <div class="recipe-whats-cooking">
+        <h5>What's cooking</h5>
+        <div class="recipe-description">
+          <%= @recipe.description.html_safe %>
+        </div>
+
+        <%- if @recipe.chef_name.present?%>
+          <div>
+            Shared with you by: <b><%= @recipe.chef_name %></b>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
