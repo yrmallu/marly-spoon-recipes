@@ -5,7 +5,7 @@ RSpec.describe 'GET /recipes' do
   let(:params) { { page: 1 } }
 
   context 'with valid params' do
-    it 'spawns the referral event creation job' do
+    it 'will returns the all recipes' do
       get path, params: params
 
       expect(response.status).to be(200)
